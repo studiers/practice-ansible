@@ -1,13 +1,11 @@
-FROM moreal/ubuntu-sshd:latest
+FROM ubuntu:latest
 
 # https://docs.ansible.com/ansible/2.5/installation_guide/intro_installation.html
 
 USER root
 
 RUN apt-get update
-RUN apt-get install software-properties-common
+RUN apt-get install -y software-properties-common
 RUN apt-add-repository ppa:ansible/ansible
 RUN apt-get update
-RUN apt-get install ansible
-
-ENTRYPOINT [ "/usr/bin/ansible" ]
+RUN apt-get install -y ansible
