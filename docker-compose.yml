@@ -1,0 +1,51 @@
+version: "3"
+
+networks:
+  ansible-test:
+    driver: bridge
+
+services:
+  instance1:
+    container_name: ubuntu1
+    domainname: ubuntu1.instance
+    image: moreal/ubuntu-sshd:latest
+    tty: true
+    networks:
+      - ansible-test
+
+  instance2:
+    container_name: ubuntu2
+    domainname: ubuntu2.instance
+    image: moreal/ubuntu-sshd:latest
+    tty: true
+    networks:
+      - ansible-test
+
+  instance3:
+    container_name: ubuntu3
+    domainname: ubuntu3.instance
+    image: moreal/ubuntu-sshd:latest
+    tty: true
+    networks:
+      - ansible-test
+
+  instance4:
+    container_name: ubuntu4
+    domainname: ubuntu4.instance
+    image: moreal/ubuntu-sshd:latest
+    tty: true
+    networks:
+      - ansible-test
+
+  ansible-master:
+    container_name: ansible
+    domainname: ansible.instance
+    image: moreal/ubuntu-ansible:latest
+    tty: true
+    depends_on:
+      - instance1
+      - instance2
+      - instance3
+      - instance4
+    networks:
+      - ansible-test
