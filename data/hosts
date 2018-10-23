@@ -1,5 +1,2 @@
 [instances]
-ubuntu1.instance
-ubuntu2.instance
-ubuntu3.instance
-ubuntu4.instance
+ubuntu[1:4].template_ansible-test ansible_user=root ansible_ssh_pass=root
