@@ -10,4 +10,6 @@ RUN apt-add-repository ppa:ansible/ansible
 RUN apt-get update
 RUN apt-get install -y ansible
 
+ENV ANSIBLE_HOST_KEY_CHECKING=False
+
 COPY ./data/hosts /etc/ansible/hosts
