@@ -4,8 +4,9 @@ USER root
 
 RUN apt-get update
 RUN apt-get upgrade
-RUN apt-get install -y openssh-server
+RUN apt-get install -y openssh-server python3
 
+RUN ln -s /usr/bin/python3 /usr/bin/python
 EXPOSE 22
 
 RUN ssh-keygen -A
