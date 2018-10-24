@@ -1,2 +1,10 @@
-# Template-To-Pratice-Ansible-With-Docker
-Template-To-Pratice-Ansible-With-Docker
+# Practice Ansible Template
+
+## Introduction
+
+## How to use
+
+```/bin/bash
+docker-compose up -d
+docker-compose exec ansible-master bash
+```
