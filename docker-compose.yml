@@ -3,7 +3,7 @@ version: "3.5"
 networks:
   instances:
     driver: bridge
-    # name: instances
+    name: instances
 
 services:
   instance1:
