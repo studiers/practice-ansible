@@ -1,0 +1,2 @@
+[instances]
+ubuntu[1:4].instances ansible_user=root ansible_ssh_pass=root
