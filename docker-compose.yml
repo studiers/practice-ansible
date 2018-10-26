@@ -8,7 +8,6 @@ networks:
 services:
   instance1:
     container_name: ubuntu1
-    # domainname: ubuntu1.com
     image: moreal/ubuntu-sshd:latest
     expose:
       - "22"
@@ -17,7 +16,6 @@ services:
 
   instance2:
     container_name: ubuntu2
-    # domainname: ubuntu2.com
     image: moreal/ubuntu-sshd:latest
     expose:
       - "22"
@@ -26,7 +24,6 @@ services:
 
   instance3:
     container_name: ubuntu3
-    # domainname: ubuntu3.com
     image: moreal/ubuntu-sshd:latest
     expose:
       - "22"
