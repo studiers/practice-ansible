@@ -3,46 +3,48 @@ version: "3.5"
 networks:
   instances:
     driver: bridge
-    name: instances
+    # name: instances
 
 services:
   instance1:
     container_name: ubuntu1
-    image: moreal/ubuntu-sshd:latest
+    build: ./images/instance
     expose:
       - "22"
     networks:
-      - ansible-test
+      - instances
 
   instance2:
     container_name: ubuntu2
-    image: moreal/ubuntu-sshd:latest
+    build: ./images/instance
     expose:
       - "22"
     networks:
-      - ansible-test
+      - instances
 
   instance3:
     container_name: ubuntu3
-    image: moreal/ubuntu-sshd:latest
+    build: ./images/instance
     expose:
       - "22"
     networks:
-      - ansible-test
+      - instances
 
   instance4:
     container_name: ubuntu4
-    domainname: ubuntu4.com
-    image: moreal/ubuntu-sshd:latest
+    build: ./images/instance
     expose:
       - "22"
     networks:
-      - ansible-test
+      - instances
 
   ansible-master:
     container_name: ansible
-    domainname: ansible
-    image: moreal/ubuntu-ansible:latest
+    build: ./images/ansible
+    volumes:
+      - type: bind
+        source: ./playbooks
+        target: /var/ansible/playbooks
     tty: true
     depends_on:
       - instance1
@@ -50,4 +52,4 @@ services:
       - instance3
       - instance4
     networks:
-      - ansible-test
+      - instances
