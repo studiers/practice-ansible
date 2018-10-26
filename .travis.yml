@@ -1,0 +1,12 @@
+sudo: required
+
+services:
+- docker
+
+before_install:
+- apt update
+- apt install docker-compose
+
+script:
+- docker-compose up -d
+- docker-compose exec ansible-master ansible all -m ping
