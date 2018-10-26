@@ -1,7 +1,7 @@
 version: "3.5"
 
 networks:
-  ansible-test:
+  instances:
     driver: bridge
     name: instances
 
