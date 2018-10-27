@@ -4,11 +4,11 @@ FROM ubuntu:latest
 
 USER root
 
-RUN apt-get update -y
-RUN apt-get install -y software-properties-common
+RUN apt-get update -y -qq
+RUN apt-get install -y -qq software-properties-common
 RUN apt-add-repository ppa:ansible/ansible
 RUN apt-get update -y -qq
-RUN apt-get install -y ansible
+RUN apt-get install -y -qq ansible
 
 ENV ANSIBLE_HOST_KEY_CHECKING=False
 

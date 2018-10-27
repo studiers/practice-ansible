@@ -4,7 +4,7 @@ USER root
 
 RUN apt-get update -y -qq
 RUN apt-get upgrade -y -qq
-RUN apt-get install -y openssh-server python3
+RUN apt-get install -y -qq openssh-server python3
 
 RUN ln -s /usr/bin/python3 /usr/bin/python
 EXPOSE 22
