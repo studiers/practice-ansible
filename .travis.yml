@@ -5,9 +5,9 @@ services:
 - docker-compose
 
 before_install:
-- apt-get update
+- sudo apt-get update
 - docker-compose -v
-- apt-get upgrade docker-compose
+- sudo apt-get upgrade docker-compose
 
 script:
 - docker-compose up -d
