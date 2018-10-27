@@ -1,7 +1,5 @@
 version: "3.5"
 
-lang: docker
-
 networks:
   instances:
     driver: bridge

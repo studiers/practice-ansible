@@ -1,5 +1,7 @@
 sudo: required
 
+lang: docker
+
 services:
 - docker
 
