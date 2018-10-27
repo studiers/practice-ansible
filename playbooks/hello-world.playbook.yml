@@ -1,0 +1,7 @@
+- hosts: instances
+  remote_user: root
+  tasks:
+    - name: create hello world
+      command:
+      - echo hello-world
+      - touch /tmp/hello-world
