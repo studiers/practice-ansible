@@ -1,5 +1,7 @@
 # Practice Ansible Template
 
+[![Build Status](https://travis-ci.com/Studiers/Template-To-Pratice-Ansible-With-Docker.svg?branch=master)](https://travis-ci.com/Studiers/Template-To-Pratice-Ansible-With-Docker)
+
 ## Introduction
 
 ## How to use
