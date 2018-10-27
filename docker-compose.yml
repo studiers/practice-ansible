@@ -46,7 +46,7 @@ services:
     volumes:
       - type: bind
         source: ./playbooks
-        target: /etc/playbooks
+        target: /var/ansible/playbooks
     tty: true
     depends_on:
       - instance1
