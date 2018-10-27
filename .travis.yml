@@ -12,5 +12,5 @@ before_install:
 - sudo mv docker-compose /usr/local/bin
 
 script:
-- docker-compose up -d
+- docker-compose up -d --build
 - docker-compose exec ansible-master ansible all -m ping
