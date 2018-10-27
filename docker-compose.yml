@@ -44,7 +44,7 @@ services:
     volumes:
       - type: bind
         source: ./playbooks
-        target: ~/playbooks
+        target: /etc/playbooks
     tty: true
     depends_on:
       - instance1
