@@ -2,10 +2,11 @@ sudo: required
 
 services:
 - docker
+- docker-compose
 
-before_install:
-- apt update
-- apt install docker-compose
+# before_install:
+# - apt update
+# - apt install docker-compose
 
 script:
 - docker-compose up -d
