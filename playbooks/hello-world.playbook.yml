@@ -1,8 +1,8 @@
 ---
-- name: dep
+- name: hello ansible!
   hosts: instances
   remote_user: root
   tasks:
-    - name: create hello world
-      shell: touch /tmp/hello-wolrd
+    - name: create hello-ansible
+      shell: touch /tmp/hello-ansible
 ...
