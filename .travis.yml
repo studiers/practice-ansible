@@ -18,3 +18,4 @@ before_install:
 script:
 - docker-compose up -d --build
 - docker-compose exec ansible-master ansible all -m ping
+- docker-compose exec ansible-master ansible-playbook /var/ansible/playbooks/instances hello-world.playbook.yml
